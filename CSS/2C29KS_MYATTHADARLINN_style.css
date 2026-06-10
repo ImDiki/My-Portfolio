@@ -1,0 +1,614 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   1. GLOBAL RESET & BASE STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f7f6;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.main-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-txt {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #0f172a;
+}
+
+.mid-nav {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+}
+
+nav ul {
+    display: flex;
+    gap: 35px;
+}
+
+nav ul li a {
+    color: #64748b;
+    font-weight: 500;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    color: #00adb5;
+}
+
+.lang-switch {
+    display: flex;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.lang-btn {
+    color: #64748b;
+}
+
+.lang-divider {
+    color: #e2e8f0;
+}
+
+.active-lang {
+    color: #00adb5;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   3. HERO PROFILE BANNER
+   ========================================================================== */
+.hero-intro {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.avatar-box {
+    position: relative;
+}
+
+.avatar-box img {
+    width: 150px;
+    height: 150px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 1px solid #f3f3eb;
+}
+
+
+
+.hero-info h1 {
+    font-size: 2rem;
+    color: #0f172a;
+}
+
+.hero-info .nick {
+    color: #00adb5;
+}
+
+.sub-title {
+    color: #64748b;
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin: 5px 0 15px 0;
+}
+
+.badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.badge {
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #334155;
+}
+
+.badge-lnk:hover {
+    border-color: #00adb5;
+    color: #00adb5;
+}
+
+.badge-grn {
+    background-color: #dcfce7;
+    color: #166534;
+    border-color: #bbf7d0;
+}
+
+/* ==========================================================================
+   4. TWO-COLUMN SPLIT LAYOUT
+   ========================================================================== */
+.split-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.side-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: sticky;
+    top: 90px;
+}
+
+.main-area {
+    flex: 2.2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sd-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.sd-card h3 {
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00adb5;
+    padding-bottom: 8px;
+    font-weight: bold;
+}
+
+.sd-txt {
+    font-size: 0.88rem;
+    color: #1e293b;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   5. SIDEBAR CREDIBILITY & TECH PILLS
+   ========================================================================== */
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skill-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.skill-cate-title {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #64748b;
+    text-transform: uppercase;
+}
+
+.pill-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pill {
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.backend-pill {
+    background-color: rgba(0, 173, 181, 0.08);
+    color: #00adb5;
+}
+
+.web-pill {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+.ooad-pill {
+    background-color: #fdf2f8;
+    color: #be185d;
+}
+
+.tool-pill {
+    background-color: #f0fdf4;
+    color: #15803d;
+}
+
+.lang-pill {
+    background-color: #fbf7ee;
+    color: #b45309;
+}
+
+/* ==========================================================================
+   6. ABOUT ME & MBTI CARD
+   ========================================================================== */
+.ab-card {
+    background-color: #3d2f44;
+    border-radius: 24px;
+    padding: 40px;
+    color: #ffffff;
+}
+
+.ab-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.split-box {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.txt-side {
+    flex: 2;
+}
+
+.img-side {
+    flex: 1;
+    max-width: 160px;
+}
+
+.inner-img {
+    width: 100%;
+    height: 160px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.bio-txt-single {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: #f1f5f9;
+}
+
+.mbti-box {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.mbti-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.mbti-badge {
+    display: flex;
+    gap: 5px;
+}
+
+.mbti-lbl {
+    background-color: #00adb5;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 2px;
+}
+
+.mbti-desc {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   7. EDUCATION TIMELINE
+   ========================================================================== */
+.edu-timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 10px;
+    border-left: 3px solid #00adb5;
+    margin-top: 15px;
+}
+
+.edu-timeline-item {
+    position: relative;
+    padding-left: 15px;
+}
+
+.edu-timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -17px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #00adb5;
+    border-radius: 50%;
+}
+
+.edu-time-badge {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #00adb5;
+    background-color: rgba(0, 173, 181, 0.08);
+    padding: 3px 10px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.edu-details h3 {
+    font-size: 1.05rem;
+    color: #0f172a;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.edu-major-tag {
+    font-size: 0.85rem;
+    color: #475569;
+    margin-top: 2px;
+}
+
+/* ==========================================================================
+   8. UNIFIED 2-COLUMN GRID (ガクチカ & GITHUB REPOS)
+   ========================================================================== */
+.cnt-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 35px;
+}
+
+.cnt-card h2 {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.exp-intro {
+    font-size: 0.92rem;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.unified-two-column-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* 🎴 ガクチカ Layout */
+.standard-item-card {
+    flex: 1 1 calc(50% - 10px);
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.card-media-box {
+    width: 100%;
+    height: 160px;
+    margin-top: auto;
+}
+
+.card-media-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-detail-box {
+    padding: 20px;
+}
+
+.badge-date {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #00adb5;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.card-detail-box h4 {
+    font-size: 0.95rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.project-tag {
+    font-size: 0.82rem;
+    color: #334155;
+    margin-bottom: 10px;
+}
+
+.bullet-desc-list {
+    padding-left: 18px;
+    list-style-type: disc;
+}
+
+.bullet-desc-list li {
+    font-size: 0.8rem;
+    color: #475569;
+    margin-bottom: 5px;
+}
+
+.action-card-btn {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.78rem;
+    font-weight: bold;
+    color: #0969da;
+    background-color: #ffffff;
+    border: 1px solid #d0d7de;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* 💻 GitHub Repositories Layout */
+.git-card-link {
+    flex: 1 1 calc(50% - 10px);
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    color: inherit;
+}
+
+.git-card-link:hover {
+    border-color: #00adb5;
+}
+
+.git-card-content {
+    padding: 20px;
+}
+
+.git-card-content h4 {
+    color: #0969da;
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.git-card-content p {
+    font-size: 0.82rem;
+    color: #57606a;
+}
+
+/* ==========================================================================
+   9. CONTACT FORM & FOOTER
+   ========================================================================== */
+.cnt-form dt {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #475569;
+}
+
+.cnt-form dd {
+    margin-bottom: 15px;
+}
+
+.cnt-form input, 
+.cnt-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #f4f7f6;
+}
+
+.cnt-form input:focus, 
+.cnt-form textarea:focus {
+    outline: none;
+    border-color: #00adb5;
+    background-color: #ffffff;
+}
+
+.submit-area button {
+    background-color: #00adb5;
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #64748b;
+    font-size: 0.85rem;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 40px;
+    background-color: #ffffff;
+}
+
+/* ==========================================================================
+   10. MOBILE RESPONSIVE ENGINE
+   ========================================================================== */
+@media (max-width: 900px) {
+    .split-layout {
+        flex-direction: column;
+    }
+    .side-area {
+        width: 100%;
+        position: static;
+    }
+    .hero-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+    .unified-two-column-grid {
+        flex-direction: column;
+    }
+    .standard-item-card, 
+    .git-card-link {
+        flex: 1 1 100%;
+    }
+}
