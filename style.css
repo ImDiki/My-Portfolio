@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
-/* ==========================================================================
-   1. GLOBAL RESET & BASE STYLES
-   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +9,7 @@
 
 body {
     font-family: sans-serif;
-    background-color: #aaa4ac;
+    background-color: #abb3c4; 
     color: #1e293b;
     line-height: 1.6;
 }
@@ -38,12 +36,13 @@ img {
     padding: 20px;
 }
 
-/* ==========================================================================
-   2. HEADER & NAVIGATION
-   ========================================================================== */
+
 header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e2e8f0;
+    /*  White Glassmorphism Effect */
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     padding: 15px 40px;
     position: sticky;
     top: 0;
@@ -73,14 +72,38 @@ nav ul {
     gap: 35px;
 }
 
+nav ul li {
+    position: relative; 
+}
+
 nav ul li a {
-    color: #64748b;
+    color: #475569;
     font-weight: 500;
+    transition: color 0.3s ease; /* Smooth behavior */
 }
 
 nav ul li a:hover, 
 nav ul li a.active {
     color: #00adb5;
+}
+
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #00adb5;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .lang-switch {
@@ -94,11 +117,11 @@ nav ul li a.active {
 }
 
 .lang-btn {
-    color: #64748b;
+    color: #475569;
 }
 
 .lang-divider {
-    color: #e2e8f0;
+    color: rgba(0, 0, 0, 0.1);
 }
 
 .active-lang {
@@ -106,12 +129,13 @@ nav ul li a.active {
     text-decoration: underline;
 }
 
-/* ==========================================================================
-   3. HERO PROFILE BANNER
-   ========================================================================== */
+
 .hero-intro {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+    
+    background: rgba(61, 47, 68, 0.85); 
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 24px;
     padding: 40px;
     display: flex;
@@ -119,6 +143,10 @@ nav ul li a.active {
     gap: 40px;
     margin-top: 20px;
     margin-bottom: 30px;
+    color: #ffffff;
+    
+    
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 .avatar-box {
@@ -130,14 +158,12 @@ nav ul li a.active {
     height: 150px;
     border-radius: 16px;
     object-fit: cover;
-    border: 1px solid #f3f3eb;
+    border: 3px solid rgba(255, 255, 255, 0.2);
 }
-
-
 
 .hero-info h1 {
     font-size: 2rem;
-    color: #0f172a;
+    color: #ffffff;
 }
 
 .hero-info .nick {
@@ -145,7 +171,7 @@ nav ul li a.active {
 }
 
 .sub-title {
-    color: #64748b;
+    color: #cbd5e1;
     font-size: 0.95rem;
     font-weight: bold;
     margin: 5px 0 15px 0;
@@ -158,29 +184,30 @@ nav ul li a.active {
 }
 
 .badge {
-    background-color: #f1f5f9;
-    border: 1px solid #e2e8f0;
+    background-color: rgba(255, 255, 255, 0.15); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 6px 12px;
     border-radius: 8px;
     font-size: 0.8rem;
     font-weight: bold;
-    color: #334155;
+    color: #f1f5f9;
+    transition: all 0.3s ease;
 }
 
 .badge-lnk:hover {
     border-color: #00adb5;
     color: #00adb5;
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px); /* Hover လုပ်ရင် အနည်းငယ် ကြွတက်စေခြင်း */
 }
 
 .badge-grn {
-    background-color: #dcfce7;
-    color: #166534;
-    border-color: #bbf7d0;
+    background-color: rgba(34, 197, 94, 0.2);
+    color: #bbf7d0;
+    border-color: rgba(34, 197, 94, 0.3);
 }
 
-/* ==========================================================================
-   4. TWO-COLUMN SPLIT LAYOUT
-   ========================================================================== */
+
 .split-layout {
     display: flex;
     gap: 30px;
@@ -188,6 +215,7 @@ nav ul li a.active {
 }
 
 .side-area {
+    width: 100%;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -197,6 +225,7 @@ nav ul li a.active {
 }
 
 .main-area {
+    width: 100%;
     flex: 2.2;
     display: flex;
     flex-direction: column;
@@ -204,15 +233,19 @@ nav ul li a.active {
 }
 
 .sd-card {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+    /* 🌟 White-Opaque Glassmorphism */
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 20px;
     padding: 25px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
 }
 
 .sd-card h3 {
     font-size: 0.9rem;
-    color: #475569;
+    color: #1e293b;
     margin-bottom: 15px;
     border-bottom: 2px solid #00adb5;
     padding-bottom: 8px;
@@ -225,9 +258,7 @@ nav ul li a.active {
     font-weight: bold;
 }
 
-/* ==========================================================================
-   5. SIDEBAR CREDIBILITY & TECH PILLS
-   ========================================================================== */
+
 .skills-wrapper {
     display: flex;
     flex-direction: column;
@@ -243,7 +274,7 @@ nav ul li a.active {
 .skill-cate-title {
     font-size: 0.8rem;
     font-weight: bold;
-    color: #64748b;
+    color: #475569;
     text-transform: uppercase;
 }
 
@@ -261,38 +292,44 @@ nav ul li a.active {
 }
 
 .backend-pill {
-    background-color: rgba(0, 173, 181, 0.08);
-    color: #00adb5;
+    background-color: rgba(0, 173, 181, 0.15);
+    color: #005b60;
 }
 
 .web-pill {
-    background-color: #eff6ff;
+    background-color: rgba(29, 78, 216, 0.1);
     color: #1d4ed8;
 }
 
 .ooad-pill {
-    background-color: #fdf2f8;
+    background-color: rgba(190, 24, 93, 0.1);
     color: #be185d;
 }
 
 .tool-pill {
-    background-color: #f0fdf4;
+    background-color: rgba(21, 128, 61, 0.1);
     color: #15803d;
 }
 
 .lang-pill {
-    background-color: #fbf7ee;
+    background-color: rgba(180, 83, 9, 0.1);
     color: #b45309;
 }
 
-/* ==========================================================================
-   6. ABOUT ME & MBTI CARD
-   ========================================================================== */
+
 .ab-card {
-    background-color: #3d2f44;
+    
+    background: rgba(61, 47, 68, 0.9); 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 24px;
     padding: 40px;
     color: #ffffff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    
+    
+    animation: fadeInUp 1.2s ease-out forwards;
 }
 
 .ab-card h2 {
@@ -321,7 +358,7 @@ nav ul li a.active {
     height: 160px;
     border-radius: 16px;
     object-fit: cover;
-    border: 4px solid rgba(255, 255, 255, 0.2);
+    border: 4px solid rgba(255, 255, 255, 0.25);
 }
 
 .bio-txt-single {
@@ -332,9 +369,10 @@ nav ul li a.active {
 
 .mbti-box {
     margin-top: 30px;
-    background-color: rgba(255, 255, 255, 0.06);
+    background-color: rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .mbti-box h3 {
@@ -359,9 +397,7 @@ nav ul li a.active {
     font-size: 0.9rem;
 }
 
-/* ==========================================================================
-   7. EDUCATION TIMELINE
-   ========================================================================== */
+
 .edu-timeline-container {
     display: flex;
     flex-direction: column;
@@ -391,7 +427,7 @@ nav ul li a.active {
     font-size: 0.8rem;
     font-weight: bold;
     color: #00adb5;
-    background-color: rgba(0, 173, 181, 0.08);
+    background-color: rgba(0, 173, 181, 0.1);
     padding: 3px 10px;
     border-radius: 6px;
     display: inline-block;
@@ -410,12 +446,13 @@ nav ul li a.active {
     margin-top: 2px;
 }
 
-/* ==========================================================================
-   8. UNIFIED 2-COLUMN GRID (ガクチカ & GITHUB REPOS)
-   ========================================================================== */
+
 .cnt-card {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+    /* 🌟 Container Glass */
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 24px;
     padding: 35px;
 }
@@ -429,7 +466,7 @@ nav ul li a.active {
 
 .exp-intro {
     font-size: 0.92rem;
-    color: #64748b;
+    color: #475569;
     margin-bottom: 25px;
 }
 
@@ -442,12 +479,20 @@ nav ul li a.active {
 /* 🎴 ガクチカ Layout */
 .standard-item-card {
     flex: 1 1 calc(50% - 10px);
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
+    /* 🌟 Inner Card Glass */
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 16px;
     overflow: hidden;
     display: flex;
     flex-direction: column-reverse;
+    transition: all 0.3s ease;
+}
+
+.standard-item-card:hover {
+    transform: translateY(-4px); /* Hover လုပ်ရင် ကတ်ပြားအိခနဲ ကြွတက်စေခြင်း */
+    border-color: #00adb5;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
 .card-media-box {
@@ -464,7 +509,6 @@ nav ul li a.active {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
     border-radius: 10px;
 }
-
 
 .card-detail-box {
     padding: 20px;
@@ -508,23 +552,33 @@ nav ul li a.active {
     font-size: 0.78rem;
     font-weight: bold;
     color: #0969da;
-    background-color: #ffffff;
-    border: 1px solid #d0d7de;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 4px 10px;
     border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.action-card-btn:hover {
+    background-color: #0969da;
+    color: #ffffff;
 }
 
 /* 💻 GitHub Repositories Layout */
 .git-card-link {
     flex: 1 1 calc(50% - 10px);
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 14px;
     color: inherit;
+    transition: all 0.3s ease;
 }
 
 .git-card-link:hover {
     border-color: #00adb5;
+    background: rgba(255, 255, 255, 0.6);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
 .git-card-content {
@@ -540,12 +594,10 @@ nav ul li a.active {
 
 .git-card-content p {
     font-size: 0.82rem;
-    color: #57606a;
+    color: #475569;
 }
 
-/* ==========================================================================
-   9. CONTACT FORM & FOOTER
-   ========================================================================== */
+
 .cnt-form dt {
     font-size: 0.8rem;
     font-weight: bold;
@@ -561,9 +613,9 @@ nav ul li a.active {
 .cnt-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    background-color: #f4f7f6;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .cnt-form input:focus, 
@@ -581,21 +633,26 @@ nav ul li a.active {
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 173, 181, 0.25);
+    
+    
+    animation: softPulse 2s infinite;
 }
 
 footer {
+    /*  Footer Glassmorphism */
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
     text-align: center;
     padding: 40px 0;
-    color: #64748b;
+    color: #475569;
     font-size: 0.85rem;
-    border-top: 1px solid #e2e8f0;
     margin-top: 40px;
-    background-color: #ffffff;
 }
 
-/* ==========================================================================
-   10. MOBILE RESPONSIVE ENGINE
-   ========================================================================== */
+
 @media (max-width: 900px) {
     .split-layout {
         flex-direction: column;
@@ -614,5 +671,140 @@ footer {
     .standard-item-card, 
     .git-card-link {
         flex: 1 1 100%;
+    }
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes softPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 173, 181, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(0, 173, 181, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 173, 181, 0);
+    }
+}
+
+
+@media (max-width: 992px) {
+    .main-wrapper {
+        padding: 15px;
+    }
+    
+    header {
+        padding: 15px 20px;
+    }
+    
+    nav ul {
+        gap: 20px; 
+    }
+    
+    .hero-intro {
+        padding: 30px;
+        gap: 25px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+    .split-layout {
+        flex-direction: column;
+    }
+    
+    .side-area {
+        width: 100%;
+        position: static; 
+    }
+    
+    .main-area {
+        width: 100%;
+    }
+    
+
+    .hero-intro {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .badge-row {
+        justify-content: center; 
+    }
+    .split-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .img-side {
+        max-width: 140px;
+        margin: 0 auto;
+    }
+    
+
+    .unified-two-column-grid {
+        flex-direction: column;
+    }
+    
+    .standard-item-card, 
+    .git-card-link {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+    
+    .nav-container {
+        flex-direction: column; 
+        gap: 10px;
+    }
+    
+    .mid-nav {
+        width: 100%;
+    }
+    
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .lang-switch {
+        width: 100%;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    
+    .hero-info h1 {
+        font-size: 1.6rem; 
+    }
+    
+    .avatar-box img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .ab-card, .cnt-card {
+        padding: 20px; 
     }
 }
