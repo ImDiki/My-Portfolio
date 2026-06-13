@@ -6,7 +6,7 @@ This section highlights my background, core development experience, and technica
 ---
 
 ### 🌐 Check out my Live Portfolio Website:
-👉 **[https://imdiki.github.io/My-Portfolio/](https://imdiki.github.io/My-Portfolio/)** *(Or visit my custom domain at **[diki.com](https://diki.com)**)*
+👉 **[https://imdiki.github.io/My-Portfolio/](https://imdiki.github.io/My-Portfolio/)
 
 ---
 
