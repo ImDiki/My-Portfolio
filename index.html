@@ -108,24 +108,29 @@
                     </div>
                 </div>
 
-                <div class="sd-card" id="contact">
-                    <h3>連絡先</h3>
-                    <form action="#" method="post" class="cnt-form">
-                        <dl>
-                            <dt><label for="name">名前</label></dt>
-                            <dd><input type="text" id="name" name="name" required></dd>
-                            
-                            <dt><label for="email">メール</label></dt>
-                            <dd><input type="email" id="email" name="email" required></dd>
-                            
-                            <dt><label for="message">メッセージ</label></dt>
-                            <dd><textarea id="message" name="message" rows="4" required></textarea></dd>
-                        </dl>
-                        <div class="submit-area">
-                            <button type="submit">送信</button>
-                        </div>
-                    </form>
-                </div>
+              <div class="sd-card" id="contact">
+   　　　　　　　　
+                <h3>連絡先</h3>
+    
+   　　　　　　　　　 <form action="thank.html" method="GET" class="cnt-form">
+        
+        <dl>
+            <dt><label for="name">名前</label></dt>
+            <dd><input type="text" id="name" name="name" required></dd>
+
+            <dt><label for="email">メール</label></dt>
+            <dd><input type="email" id="email" name="email" required></dd>
+
+            <dt><label for="message">メッセージ</label></dt>
+            <dd><textarea id="message" name="message" rows="4" required></textarea></dd>
+        </dl>
+
+        <div class="submit-area">
+            <button type="submit">送信</button>
+        </div>
+
+   　　　 </form>
+ 　　　　　　</div>
             </aside>
 
             <div class="main-area">
@@ -186,82 +191,94 @@
                     </div>
                 </section>
 
-                <section class="cnt-card" id="experience">
-                    <h2>┃ ガクチカ</h2>
-                    <p class="exp-intro">
-                        学生時代の取り組みと、チーム開発・マネジメントにおける実践的な経験です。
-                    </p>
+               <section class="cnt-card" id="experience">
+    <h2>┃ ガクチカ</h2>
+    <p class="exp-intro">
+        学生時代の取り組みと、チーム開発・マネジメントにおける実践的な経験です。
+    </p>
 
-                    <div class="unified-two-column-grid">
-                        
-                        <div class="standard-item-card">
-                            <div class="card-media-box">
-                                <img src="IMAGES/MF.jpg" alt="メディアフロンティア展示会">
-                            </div>
-                            <div class="card-detail-box">
-                                <span class="badge-date">2026年2月 | 大阪</span>
-                                <h4>開発チームリーダー｜メディアフロンティア展示会</h4>
-                                <p class="project-tag"><strong>プロジェクト:</strong> 学生出席管理システム（C# / WPF）</p>
-                                <ul class="bullet-desc-list">
-                                    <li>3名の開発チームを率いて、タイムライン管理、タスク割り当て、システム設計を統括。</li>
-                                    <li>管理者用ダッシュボードと学生用ポータルを網羅した堅牢なシステムを構築。</li>
-                                    <li>Webカメラを用いた自動出席登録機能を開発し、教室でのチェックインを効率化。</li>
-                                </ul>
-                                <a href="https://www.youtube.com/watch?v=F0f-90iB_6M" target="_blank" class="action-card-btn">📺 MF007T </a>
-                            </div>
-                        </div>
+    <div class="unified-two-column-grid">
+        
+        <div class="standard-item-card flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front card-media-box">
+                    <img src="IMAGES/MF.jpg" alt="メディアフロンティア展示会">
+                    
+                </div>
+                <div class="flip-card-back card-detail-box">
+                    <span class="date">2026年2月 | 大阪</span>
+                    <h4>開発チームリーダー｜メディアフロンティア</h4>
+                    <p class="tag"><strong>プロジェクト:</strong> 学生出席管理システム（C# / WPF）</p>
+                    <ul class="bullet">
+                        <li>3名の開発チームを率いて、タイムライン管理、タスク割り当て、システム設計を統括。</li>
+                        <li>管理者用ダッシュボードと学生用ポータルを網羅した堅牢なシステムを構築。</li>
+                        <li>Webカメラを用いた自動出席登録機能を開発し、教室でのチェックインを効率化。</li>
+                    </ul>
+                    <a href="https://youtu.be/ZkTgB_T5_fs" target="_blank" class="action-card-btn">📺 MF007T </a>
+                </div>
+            </div>
+        </div>
 
-                        <div class="standard-item-card">
-                            <div class="card-media-box">
-                                <img src="IMAGES/EB.jpg" alt="East Bridge株式会社">
-                            </div>
-                            <div class="card-detail-box">
-                                <span class="badge-date">2026年3月 〜 現在 | 大阪</span>
-                                <h4>ミャンマーチームリーダー｜East Bridge 株式会社</h4>
-                                <p class="project-tag"><strong>企業概要:</strong> KDDI最大のコア代理店であり、国際通信サービスを管理。</p>
-                                <ul class="bullet-desc-list">
-                                    <li>ミャンマー人アルバイトのリーダーに任命され、シフト作成やタスク割り当てを担当。</li>
-                                    <li>メインオペレーターとして、ミャンマー人顧客のSIMカード契約やトラブルシューティングを対応。</li>
-                                    <li>日本人のマネジメント層と外国人顧客の間のコミュニケーションを円滑に仲介。</li>
-                                </ul>
-                                <a href="http://www.eastbridge.co.jp/" target="_blank" class="action-card-btn">🌐 企業公式ウェブサイトを見る</a>
-                            </div>
-                        </div>
+        <div class="standard-item-card flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front card-media-box">
+                    <img src="IMAGES/EB.jpg" alt="East Bridge株式会社">
+                  
+                </div>
+                <div class="flip-card-back card-detail-box">
+                    <span class="date">2026年3月 〜 現在 | 大阪</span>
+                    <h4>ミャンマーチームリーダー｜East Bridge</h4>
+                    <p class="tag"><strong>企業概要:</strong> KDDI最大のコア代理店であり、国際通信サービスを管理。</p>
+                    <ul class="bullet">
+                        <li>ミャンマー人アルバイトのリーダーに任命され、シフト作成やタスク割り当てを担当。</li>
+                        <li>メインオペレーターとして、ミャンマー人顧客のSIMカード契約やトラブルを対応。</li>
+                        <li>日本人のマネジメント層と外国人顧客の間のコミュニケーションを円滑に仲介。</li>
+                    </ul>
+                    <a href="http://www.eastbridge.co.jp/" target="_blank" class="action-card-btn">🌐 企業公式ウェブサイトを見る</a>
+                </div>
+            </div>
+        </div>
 
-                        <div class="standard-item-card">
-                            <div class="card-media-box">
-                                <img src="IMAGES/Panel.jpg" alt="The SOL Campus">
-                            </div>
-                            <div class="card-detail-box">
-                                <span class="badge-date">2025年1月 | リモート（Zoom）</span>
-                                <h4>ゲストスピーカー｜The SOL Campus パネルディスカッション</h4>
-                                <p class="project-tag"><strong>ディベートテーマ:</strong> 「若者の成功に必要なのは、お金か？教育か？」</p>
-                                <ul class="bullet-desc-list">
-                                    <li>パネリストとして招待され、ライブディベートで論理的な主張を展開。</li>
-                                    <li>日本の大学生や、日本で活躍するプロのITエンジニアたちと多様な意見を共有。</li>
-                                    <li>プレッシャーのかかる環境下で、高いパブリックスピーキングと批判的思考力を発揮。</li>
-                                </ul>
-                            </div>
-                        </div>
+        <div class="standard-item-card flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front card-media-box">
+                    <img src="IMAGES/Panel.jpg" alt="The SOL Campus">
+                 
+                </div>
+                <div class="flip-card-back card-detail-box">
+                    <span class="date">2025年1月 | リモート（Zoom）</span>
+                    <h4>ゲストスピーカー｜The SOL Campus</h4>
+                    <p class="tag"><strong>テーマ:</strong> 「若者の成功に必要なのは、お金か？教育か？」</p>
+                    <ul class="bullet">
+                        <li>パネリストとして招待され、ライブディベートで論理的な主張を展開。</li>
+                        <li>日本の大学生や、日本で活躍するプロのITエンジニアたちと多様な意見を共有。</li>
+                        <li>プレッシャーのかかる環境下で、高いパブリックスピーキング力を発揮。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-                        <div class="standard-item-card">
-                            <div class="card-media-box">
-                                <img src="IMAGES/OSC.jpg" alt="オープンソースカンファレンス">
-                            </div>
-                            <div class="card-detail-box">
-                                <span class="badge-date">2026年2月 | 大阪</span>
-                                <h4> 学生スタッフ｜<br>オープンソースカンファレンス(OSC)Osaka</h4>
-                                <p class="project-tag"><strong>イベント概要:</strong> 日本発のコアなオープンソースコミュニティイベント。</p>
-                                <ul class="bullet-desc-list">
-                                    <li>公式学生スタッフとして、大規模なITイベントの会場設営や来場者誘導をサポート。</li>
-                                    <li>多くのオープンソース貢献者や企業開発者と交流し、最新の技術トレンドを吸収。</li>
-                                    <li>スピード感が求められるイベント現場で、柔軟なチームワークと高い信頼性を発揮。</li>
-                                </ul>
-                            </div>
-                        </div>
+        <div class="standard-item-card flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front card-media-box">
+                    <img src="IMAGES/OSC.jpg" alt="オープンソースカンファレンス">
+                    
+                </div>
+                <div class="flip-card-back card-detail-box">
+                    <span class="date">2026年2月 | 大阪</span>
+                    <h4>学生スタッフ｜OSC Osaka</h4>
+                    <p class="tag"><strong>イベント概要:</strong> 日本発のコアなオープンソースコミュニティイベント。</p>
+                    <ul class="bullet">
+                        <li>公式学生スタッフとして、大規模なITイベントの会場設営や来場者誘導をサポート。</li>
+                        <li>多くのオープンソース貢献者や企業開発者と交流し、最新の技術トレンドを吸収。</li>
+                        <li>スピード感が求められるイベント現場で、柔軟なチームワークを発揮。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-                    </div>
-                </section>
+    </div>
+</section>
 
                 <section class="cnt-card" id="exp">
                     <h2>┃ MY GITHUB REPOSITORIES & PROJECTS</h2>
