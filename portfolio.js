@@ -48,7 +48,7 @@
                 <!-- Avatar Card (col 4) -->
                 <div class="md:col-span-1 bg-black/30 backdrop-blur-sm border border-white/15 rounded-3xl p-4 flex flex-col justify-between items-center hover:border-white/30 hover:scale-[1.01] hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-300 min-h-[220px]">
                     <div class="relative w-full h-full rounded-2xl overflow-hidden group">
-                        <img src="IMAGES/2.jpg" alt="Profile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="IMAGES/2.png" alt="Profile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center gap-1.5 border border-zinc-800">
                             <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                             <span class="text-[10px] text-zinc-300 font-bold tracking-wider">LIVE</span>
