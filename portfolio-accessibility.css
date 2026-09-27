@@ -1,0 +1,18 @@
+/* Small refinements to the existing dark/teal card layout. */
+html { scroll-behavior: smooth; }
+body { overflow-wrap: anywhere; }
+section { scroll-margin-top: 1.5rem; }
+:focus-visible { outline: 3px solid #22d3dc; outline-offset: 5px; border-radius: 4px; }
+.skip-link { position: absolute; left: 1rem; top: -8rem; z-index: 10; background: #fff; color: #09090b; padding: .75rem 1rem; }
+.skip-link:focus { top: 1rem; }
+.text-zinc-500, .text-zinc-600 { color: #a1a1aa; }
+.main-nav a, .lang-switch a { padding-block: .65rem; }
+@media (max-width: 767px) {
+  .site-header .main-nav { order: 3; width: 100%; gap: 1.25rem; }
+  main .p-8 { padding: 1.5rem; }
+  .site-header { padding-block: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

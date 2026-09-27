@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["ES2017", "DOM"],
+    "strict": true,
+    "noEmitOnError": true,
+    "newLine": "lf"
+  },
+  "include": ["portfolio.ts", "portfolio_eng.ts", "devlog.ts", "devlog_eng.ts"]
+}
